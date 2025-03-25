@@ -34,12 +34,15 @@
 # 运行环境
 ```bash
 # 克隆项目
-git clone https://github.com/yourname/hearing-test.git
-cd hearing-test
+git clone https://github.com/whitejade-eng/HearTest.git
 ```
 
 ### 后端服务部署	
-以下是基于你提供的信息生成的 ​**READMDME 模板**，已结合听力检测场景优化重点功能说明和技术细节：
+#### 1. 创建虚拟环境（Python 3.8）
+bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
 
 #### 2 .安装依赖
 
@@ -86,7 +89,7 @@ DATABASES = {
     "default": {  
         'ENGINE': "django.db.backends.mysql",  
   'NAME': 'rapid7tonedetermination', # 数据库名称  
-  'HOST': 'localhost', # 数据库地址，本机 ip
+  'HOST': 'localhost', # 数据库地址， 本地 ip
     'PORT': 3306, # 端口  
   'USER': 'root', # 数据库用户名  
   'PASSWORD': 'root', # 数据库密码  
