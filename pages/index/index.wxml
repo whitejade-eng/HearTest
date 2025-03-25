@@ -1,0 +1,21 @@
+<navigation-bar bind:run="btnReturn" default-data="{{defaultData}}"></navigation-bar>
+<view class='top'>
+<text>{{count}}.请选择您所听到的字：</text>
+<view class="musicd">
+    <image src="../icon/mic1.png" wx:if="{{isPlay}}" bindtap="audioPlay"></image>
+    <image src="../icon/mic2.png" wx:else bindtap="audioPause"></image>
+  </view>
+</view>
+
+<view class='selection'>
+  <view class='{{view1}}' bindtap='view1Click' id='1'><image src="../img/{{img_one}}.jpg"></image>A</view>
+  <view class='{{view2}}' bindtap='view2Click' id='2'><image src="../img/{{img_two}}.jpg"></image>B</view>
+</view>
+<view class='selection'>
+  <view class='{{view3}}' bindtap='view3Click' id='3'><image src="../img/{{img_three}}.jpg"></image>C</view>
+  <view class='{{view4}}' bindtap='view4Click' id='4'><image src="../img/{{img_four}}.jpg"></image>D</view>
+</view>
+
+<button bindtap="Next_question" >下一题</button>
+
+

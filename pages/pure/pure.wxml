@@ -1,0 +1,52 @@
+<!--pages/pure/pure.wxml-->
+<navigation-bar bind:run="btnReturn" default-data="{{defaultData}}"></navigation-bar>
+<view class = "container">
+  <text class = "title">纯音测试</text>
+    <view class="view_divider">
+	    <view ></view>
+	      <text class="text_divider">**********</text>
+	    <view ></view>
+    </view>
+  <view>
+    <text class = "title">{{testPureHz}}Hz</text>
+  </view>
+  <view class = "hz">
+    <view style="display: flex;flex-direction: column;align-items: center;">
+      <view style="display: flex;align-items: center;" >
+        <view style="display: flex;flex-direction: column;align-items: center;justify-content: center;" wx:for="{{pureHz}}" wx:for-item="i">
+            <view style="background: rgb(181, 196, 177); margin: 15px;margin-bottom: 10px;width: 5px;height: 20px;" ></view>
+          <text style="color: rgb(181, 196, 177);font-size:10px;margin-bottom: 10px;">{{i}}</text>
+          <view  wx:if="{{testPureHz==i}}"><view class="circle1"></view></view>
+          <view  wx:if="{{testPureHz!=i}}"><view class="circle2"></view></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <text class = "title">{{testDBHL}}dB HL</text>
+  </view>
+  <view class = "dbhl">
+    <view style="display: flex;flex-direction: column;align-items: center;">
+      <view style="display: flex;align-items: center;" >
+        <view style="display: flex;flex-direction: column;align-items: center;justify-content: center;" wx:for="{{dBHL}}" wx:for-item="j">
+            <view style="background: rgb(181, 196, 177); margin: 5px;margin-bottom: 0;width: 2px;height: 10px;" ></view>
+            <view wx:if="{{j%10==0}}" style="background: rgb(181, 196, 177);width: 2px;height: 15px;"></view>
+          <view  wx:if="{{testDBHL==j}}" style="margin-top: 10px;"><view class="circle1"></view></view>
+          <view  wx:if="{{testDBHL!=j}}" style="margin-top: 10px;"><view class="circle2"></view></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text class="text_instr">
+    请仔细听声，听到声音，请点击“听见了”按钮，如没有听到任何声音，请点击“没听到”。
+  </text>
+  
+  <view class="view_btn">
+    <button class="yes" style="margin:40px;width: 120px;" bindtap="yes_question" >听见了</button>
+    <button class="no" style="margin:40px;width: 120px;" bindtap="no_question" >没听到</button>
+  </view>
+
+</view>
+
+      
+ 

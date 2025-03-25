@@ -1,0 +1,43 @@
+<!--pages/noiseTest.wxml-->
+<navigation-bar bind:run="btnReturn" default-data="{{defaultData}}"></navigation-bar>
+<view class='top'>
+<text>{{count}}.请根据提示选择：</text>
+<view class="musicd">
+    <image src="../icon/mic1.png" wx:if="{{isPlay}}" bindtap="audioPlay"></image>
+    <image src="../icon/mic2.png" wx:else bindtap="audioPause"></image>
+  </view>
+</view>
+<!--<view class='selection' style="display: {{SelectDisable}};">-->
+<view class='selection'>
+  <view class='{{view1}}' bindtap='view1Click' id='1' ><image src="../img/{{img_one}}.jpg"></image>A</view>
+  <view class='{{view2}}' bindtap='view2Click' id='2'><image src="../img/{{img_two}}.jpg"></image>B</view>
+</view>
+<view class='selection'>
+  <view class='{{view3}}' bindtap='view3Click' id='3'><image src="../img/{{img_three}}.jpg"></image>C</view>
+  <view class='{{view4}}' bindtap='view4Click' id='4'><image src="../img/{{img_four}}.jpg"></image>D</view>
+</view>
+<!--<view style="display: {{SelectDisable_SNR}};">-->
+<view style="display: {{SelectDisable_SNR}};">
+    <text class = "title" style="width: 100%;height: 20px;display: flex;align-items: center;justify-content: center; ">{{testSNR}}dB</text>
+  </view>
+  <view class = "dbhl" style="display: {{SelectDisable_SNR}};">
+    <view style="display: flex;flex-direction: column;align-items: center;">
+      <view style="display: flex;align-items: center;" >
+        <view style="display: flex;flex-direction: column;align-items: center;justify-content: center;" wx:for="{{dBHL}}" wx:for-item="j ">
+            <view style="background: rgb(181, 196, 177); margin: 5px;margin-bottom: 0;width: 2px;height: 10px;" ></view>
+            <view wx:if="{{j%10==0}}" style="background: rgb(181, 196, 177);width: 2px;height: 15px;"></view>
+          <view  wx:if="{{testDBHL==j}}" style="margin-top: 10px;"><view class="circle1"></view></view>
+          <view  wx:if="{{testDBHL!=j}}" style="margin-top: 10px;"><view class="circle2"></view></view>
+        </view>
+      </view>
+    </view>
+  </view>  
+  <!--  <view class="view_btn" style="display: {{SelectDisable_SNR}};">-->
+  <view class="view_btn" style="display: {{SelectDisable_SNR}}">
+    <button class="yes" style="margin:40px;width: 120px;" bindtap="yes_question" >听清了</button>
+    <button class="no" style="margin:40px;width: 120px;" bindtap="no_question" >没听清</button>
+  </view>
+
+
+
+<button class = "next" bindtap="Next_question" style="display: {{SelectDisable}};">下一题</button>

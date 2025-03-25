@@ -1,0 +1,29 @@
+/* pages/noiseResult/noiseResult.wxss */
+.view_text{
+  margin:10px; display:flex; align-items: center; justify-content: center;
+}
+
+.view_text_sym{
+  margin:10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text_sym{
+  font-size:20px; 
+  font-weight:bold;
+}
+
+.text_sym_score{
+  font-size:20px; color:#3da9fc;
+}
+.ec-container{
+  height:300px;
+}
+
+.btn{
+  width: 90%;
+  margin-top: 40px;
+  background-color:#3da9fc;
+  color: white;
+}

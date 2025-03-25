@@ -1,0 +1,28 @@
+<!--pages/noiseType.wxml-->
+<navigation-bar bind:run="btnReturn" default-data="{{defaultData}}"></navigation-bar>
+<view class="container">
+  <text class="title">噪声下言语测试参数设置</text>
+  <text class="ind" style="margin-bottom: 20rpx;">请根据您的测试需要，设置噪声参数</text>
+  <form bindsubmit="btnFormSubmit">
+  <view>
+    <view class="userInfo">
+      <label style="display: flex; flex-direction: column; ">发音人性别：
+          <radio-group class="radio-group" bindchange="radioChangeSex">
+           <label class="radio"><radio value="male"  color="#3da9fc">男</radio></label>
+           <label class="radio"><radio value="female"  color="#3da9fc">女</radio></label>
+          </radio-group>
+        </label>
+        
+        <label style="display: flex; flex-direction: column; ">噪声类型：
+          <radio-group class="radio-group" bindchange="radioChangeNoise">
+           <label class="radio"><radio value="white"  color="#3da9fc">白噪声</radio></label>
+           <label class="radio"><radio value="pink"  color="#3da9fc">粉噪声</radio></label>
+           <label class="radio"><radio value="babble"  color="#3da9fc">嘈杂语噪声</radio></label>
+           <label class="radio"><radio value="speech-shaped"  color="#3da9fc">言语谱噪声</radio></label>
+          </radio-group>
+        </label>
+      </view>
+  </view>
+  <button class="btn" form-type="submit">设置完成</button>
+</form>
+</view>

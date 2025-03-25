@@ -1,0 +1,9 @@
+<!--pages/template/navigation-bar/navigation-bar.wxml-->
+<!-- 自定义顶部栏 -->
+<view class="nav-bar" style="height:{{navBarHeight}}px; z-index: 999;">
+  <button class="nav-btn"  style="margin-top: {{navBarHeight-44+7}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;" bindtap="ListenReturn"><image src="../../icon/left.png"></image></button>
+  <text class="nav-text" style="margin-top: {{navBarHeight-44+7}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px; font-size: 14px; color: black;">听力测试</text>
+</view>
+
+<!-- 占位，高度与顶部栏一样 -->
+<view style="margin-top:{{navBarHeight}}px; z-index: 999;"></view>

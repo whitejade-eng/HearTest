@@ -1,0 +1,113 @@
+/* pages/pure/pure.wxss */
+.container{
+  padding: 0px;
+}
+.container .title{
+  width: 400rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: cursive;
+  color: rgb(126, 172, 209);
+}
+
+.view_divider {
+  width: 96%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0rpx 2% 0rpx 2%;
+}
+
+/* 两个view的样式 */
+.view_divider view {
+  width: 33%;
+  height: 5rpx;
+  background: linear-gradient(to right, rgb(92, 142, 192), rgb(126, 172, 209));
+}
+
+/* 字体的样式 */
+.text_divider {
+  font-size: 25rpx;
+  color:rgb(126, 172, 209);
+  margin: 0rpx 2% 0rpx 2%;
+}
+
+/* 频率条样式 */
+
+.hz {
+ margin: 15px;
+ width: 90%;
+ height: 60%;
+ padding-bottom: 5px;
+ border: 2px solid  rgb(181, 196, 177);
+ border-radius: 10px;
+}
+
+.hz_swp{
+  background: rgb(181, 196, 177);
+  width: 2px;
+  height: 15px;
+}
+
+.circle1{
+  width: 10px;
+  margin-bottom: 5px;
+    height: 10px;
+    background: rgb(150, 164, 139);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+.circle2{
+  width: 10px;
+  margin-bottom: 5px;
+    height: 10px;
+    background:white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+/* 声音条 */
+.dbhl {
+  margin: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  width: 90%;
+  height: 60%;
+  border: 2px solid  rgb(181, 196, 177);
+  border-radius: 10px;
+ }
+
+/* 说明文字样式 */
+.view_btn{
+  display: flex;
+  align-items: center;
+
+}
+
+.text_instr{
+  margin: 15px;
+  width: 60%;
+  font-size: 10px;
+  text-align: center;
+}
+
+.yes{
+  color:#fff;
+  background: rgb(126, 172, 209);
+  margin: 30px; 
+}
+
+.no{
+  color:#fff;
+  background: rgb(181, 196, 177);
+  margin: 30px; 
+}
+

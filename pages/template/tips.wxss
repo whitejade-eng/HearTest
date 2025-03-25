@@ -1,0 +1,75 @@
+/* pages/template/tips.wxss */
+.tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.tips .tips_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  height: auto;
+  border-radius: 45rpx;
+  background: #fff;
+  overflow: hidden;
+}
+
+.tips .tips_box .hint_view {
+  display: flex;
+  align-items: center;
+}
+
+.tips .tips_box .hint_view .text {
+  display: flex;
+  flex-direction: column;
+  margin: 12rpx 24rpx;
+}
+
+.tips .tips_box .hint1 {
+  margin-top: 38rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #1a1a1a;
+  line-height:52rpx;
+  border-bottom:1px solid;
+}
+
+.tips .tips_box .hint2 {
+  margin-top: 14rpx;
+  text-align: justify;
+  text-indent:52rpx;
+  font-size: 26rpx;
+  color: #666;
+  line-height:42rpx;
+}
+
+.tips .tips_box .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32rpx 0 32px;
+  width: 50%;
+  line-height: 64rpx;
+  border-radius: 80rpx;
+  font-size: 32rpx;
+  letter-spacing: 6rpx;
+  color: #fff;
+  background-color: #3da9fc;
+}
+.isTipShow {
+display: block;
+}
+
+.isTipHide {
+display: none;
+}
+

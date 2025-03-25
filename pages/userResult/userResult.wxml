@@ -1,0 +1,23 @@
+<!--pages/userResult/userResult.wxml-->
+<navigation-bar bind:run="btnReturn" default-data="{{defaultData}}"></navigation-bar>
+<view>
+<text style="font-size:20px; font-weight:bold;margin:10px;display:flex; align-items: center; justify-content: center; ">七音测试成绩报告</text>
+<text class="view_text">您的言语识别率为(%):</text>
+<text style="font-size:40px; color:steelblue;margin:5px;display:flex; align-items: center; justify-content: center;">{{userScore}}</text>
+<text class="view_text">您的各音节正确率为(%):</text>
+<view class="ec-container">
+     <ec-canvas canvas-id="echart-pie" ec="{{ec}}"></ec-canvas>
+</view>
+<!--<view style="margin-left: 30%;margin-right: 30%;">
+  <view class="view_text_sym"><text class="text_sym">m:</text><text  class="text_sym_score">{{userAccuracyResult.m}}%</text></view>
+  <view class="view_text_sym"><text class="text_sym">s:</text><text class="text_sym_score">{{userAccuracyResult.s}}%</text></view>
+  <view class="view_text_sym"><text class="text_sym">x:</text><text class="text_sym_score">{{userAccuracyResult.x}}%</text></view>
+  <view class="view_text_sym"><text class="text_sym">sh:  </text><text class="text_sym_score">{{userAccuracyResult.sh}}%</text></view>
+  <view class="view_text_sym"><text class="text_sym">u:</text><text class="text_sym_score">{{userAccuracyResult.u}}%</text></view>
+  <view class="view_text_sym"><text class="text_sym">i:</text><text class="text_sym_score">{{userAccuracyResult.i}}%</text></view>
+  <view class="view_text_sym"><text class="text_sym">a:</text><text class="text_sym_score">{{userAccuracyResult.a}}%</text></view>
+</view>-->
+
+<button bindtap="btnReturn" class="btn">再来一次</button>
+</view>
+

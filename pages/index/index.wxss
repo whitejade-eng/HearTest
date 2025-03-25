@@ -1,0 +1,67 @@
+.top{
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.musicd image {
+width: 25px;
+height: 25px;
+}
+
+.selection1 {
+  width: 300 rpx ;
+  height: 150 rpx ;
+  background-color: #b8dbf3;
+  margin-bottom: 20px;
+  box-shadow:0rpx 2rpx 5rpx 5rpx #c8c3c3;
+  display: flex ;
+  flex-direction: column ;
+  justify-content: space-around ;
+  align-items: center ;
+  border-radius: 5px;
+  }
+  .selection2 {
+  width: 300 rpx ;
+  height: 150 rpx ;
+  background-color: #3da9fc;
+  
+  box-shadow:0rpx 2rpx 5rpx 5rpx #c8c3c3 ;
+  display: flex ;
+  flex-direction: column ;
+  justify-content: space-around ;
+  align-items: center ;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  }
+  .selection3 {
+  width: 300 rpx ;
+  height: 150 rpx ;
+  background-color: #b8dbf3 ;
+  
+  box-shadow:0rpx 2rpx 5rpx 5rpx #c8c3c3;
+  display: flex ;
+  flex-direction: column ;
+  justify-content: space-around ;
+  align-items: center ;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  }
+  .selection {
+  width: 750 rpx ;
+  height: 800 rpx ;
+  display: flex ;
+  flex-direction: row ;
+  justify-content: space-around ;
+  align-items: center ;
+  
+  
+  }
+  image {
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    overflow: hidden;
+  }
+button{color:#fff;background:  #3da9fc;margin: 30px; }
+

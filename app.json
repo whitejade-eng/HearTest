@@ -1,0 +1,28 @@
+{
+  "pages": ["pages/noiseTest/noiseTest",
+    "pages/userLogin/userLogin",
+    
+    "pages/noiseType/noiseType",
+    "pages/pure/pure",
+    "pages/userResult/userResult",
+    "pages/userPureResult/userPureResult",
+    "pages/index/index",
+    "pages/userManagement/userManagement",
+    "pages/logs/logs",
+    "pages/template/tips",
+    "pages/noiseResult/noiseResult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "听力测试",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "navigation-bar": "pages/template/navigation-bar/navigation-bar"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

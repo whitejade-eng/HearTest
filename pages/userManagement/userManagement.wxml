@@ -1,0 +1,101 @@
+<!--pages/userManagement/userManagement.wxml-->
+<navigation-bar bind:run="btnReturn" default-data="{{defaultData}}"></navigation-bar>
+<view class="content">
+ <view class="head">
+  <view class="head-img"><image class="headBackground" src="../icon/head-sqr.png"></image></view>
+</view>
+<form bindsubmit="btnFormSubmit">
+<view style="display:flex;  justify-content: center; align-items: center; margin: 0;">
+  <view class="userMS">
+   <view>
+    <view class="user-randomNumber">
+      <label>测试号：{{userRandomNumber}}</label>
+    </view>
+    <view class="user-randomNumber">
+      <label style="padding-top:10px;">请填写您的资料</label>
+    </view>
+      <view class="userInfo" >
+        <label>姓名：<input name="userName" placeholder="请输入您的姓名"/></label>
+      </view>
+      <view class="userInfo">
+        <label>
+          性别:
+          <radio-group class="radio-group" bindchange="radioChange1">
+           <label class="radio">男<radio value="male" checked="true" color="#3da9fc"></radio></label>
+           <label class="radio">女<radio value="female" color="#3da9fc"></radio></label>
+          </radio-group>
+        </label>
+      </view>
+      <view class="userInfo">
+        <label>年龄：<input name="userAge" placeholder="请输入您的年龄"/></label>
+      </view>
+      <view class="userInfo">
+        <label>听力是否损失：
+          <radio-group class="radio-group" bindchange="radioChange3">
+           <label class="radio">是<radio value="true"  color="#3da9fc"></radio></label>
+           <label class="radio">否<radio value="false" checked="true"  color="#3da9fc"></radio></label>
+          </radio-group>
+        </label>
+      </view>
+      <block wx:if="{{HearLoss}}">
+        <view class="userInfo">
+        <label>听力损失时间：<input name="userLossTime" placeholder="单位：年"/></label>
+      </view>
+      <view class="userInfo">
+        <label>左耳听损：<input name="userLEar" placeholder="单位：db"/></label>
+      </view>
+      <view class="userInfo">
+        <label>左耳佩戴：
+          <picker bindchange="bindPickerChange3" value="{{index1}}" range="{{array}}">
+            {{array[index1]}}
+          </picker> 
+        </label>
+      </view>
+      <view class="userInfo">
+        <label>右耳听损：<input name="userREar" placeholder="单位：db"/></label>
+      </view>
+      <view class="userInfo">
+        <label>右耳佩戴：
+          <picker bindchange="bindPickerChange4" value="{{index2}}" range="{{array}}">
+            {{array[index2]}}
+          </picker> 
+        </label>
+      </view>
+      </block>
+      <view class="user-randomNumber">
+        <label>请选择测试使用发音的类别</label>
+      </view>
+      <view class="userInfo">
+        <label>发音人性别：
+          <radio-group class="radio-group" bindchange="radioChange2">
+           <label class="radio">男<radio value="male"  color="#3da9fc"></radio></label>
+           <label class="radio">女<radio value="female" color="#3da9fc"></radio></label>
+          </radio-group>
+        </label>
+      </view>
+      <view class="userInfo">
+        <label>发音人年龄：
+          <picker bindchange="bindPickerChange1" value= "{{indexAge}}" range="{{arrayAge}}">
+          {{arrayAge[indexAge]}}
+          </picker>
+        </label>
+      </view>
+      <view class="userInfo">
+        <label>背景声大小：
+          <picker bindchange="bindPickerChange2" value= "{{indexNoise}}" range="{{gaussianNoise}}">
+          {{gaussianNoise[indexNoise]}}
+          </picker>
+        </label>
+      </view>
+   </view>
+  </view>
+</view>
+<view><button class="btn" form-type="submit">开始测试</button></view>
+</form>
+
+<view></view>
+
+<view class="payWay-container {{isTipTrue?'isTipShow':'isTipHide'}}">
+  <include src="../template/tips.wxml"></include>
+</view>
+</view>

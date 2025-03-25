@@ -1,0 +1,11 @@
+<!--pages/userPureResult/userPureResult.wxml-->
+<navigation-bar bind:run="btnReturn" default-data="{{defaultData}}"></navigation-bar>
+<view class="container">
+  <text class="title">纯音测试结果</text>
+  <text class="ind">此结果仅供参考！</text>
+  <text class="ind">如果想获得更精确的结果，请前往医院进行专业的评估</text>
+  <view>
+    <image src="{{srcimg}}"></image>
+  </view>
+  <button bindtap="btnReturn" class="btn">再来一次</button>
+</view>
